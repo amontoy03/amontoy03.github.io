@@ -1,0 +1,26 @@
+body {
+    background-color: darkseagreen;
+    text-align: center;
+    color: black;
+}
+
+a {
+    color: cornsilk;
+    text-decoration: none;
+
+}
+
+a:hover {
+    color: darkgreen;
+    text-decoration: line;
+}
+
+img {
+    width: 50%
+}
+
+figure {
+    text-align: center;
+    font-style: italic ;
+}
+
