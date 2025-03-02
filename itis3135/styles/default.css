@@ -2,7 +2,9 @@ body {
     background-color: darkseagreen;
     text-align: center;
     color: black;
+    
 }
+
 
 a {
     color: cornsilk;
@@ -16,7 +18,8 @@ a:hover {
 }
 
 img {
-    width: 50%
+    width: 50%; 
+    
 }
 
 figure {
@@ -28,4 +31,5 @@ figure {
     margin: 0 auto;
     text-align: left;
 }
+
 
