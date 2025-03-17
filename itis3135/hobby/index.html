@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby Page</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #294c60;
+        }
+        main {
+            color: #ADB6C4;
+        }
+        h1 {
+            color: #ADB6C4;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+        }
+        nav a {
+            color: #ADB6C4;
+            text-decoration: none;
+            margin: 5px;
+            font-size: 1.4em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            margin: 20px auto;
+            width: 70%;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        figcaption {
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+        figcaption a {
+            text-decoration: none;
+            color: #ADB6C4;
+        }
+        figcaption a:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LEGO</h1>
+        <nav>
+            <a href="javascript:void(0)" onclick="showSection('home')">Home</a> 🧩
+            <a href="javascript:void(0)" onclick="showSection('who')">Who</a> 🧩
+            <a href="javascript:void(0)" onclick="showSection('when')">When</a> 🧩
+            <a href="javascript:void(0)" onclick="showSection('where')">Where</a> 🧩
+            <a href="javascript:void(0)" onclick="showSection('how')">How</a> 🧩
+            <a href="javascript:void(0)" onclick="showSection('why')">Why</a> 🧩
+            <a href="javascript:void(0)" onclick="showSection('ai')">AI Prompts</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="who"> 
+        <h2>Who</h2>
+        
+        </section>
+
+        <section id="home">
+            <h2>Home</h2>
+            <figure>
+                <img src="images/legoWhat.jpg" width="600" height="150"/>
+                <figcaption>
+                    <em>A Lego Technic set</em>
+                </figcaption>
+                <p></p>
+            </figure>
+        </section>
+
+        <section id="when">
+            <h2>When</h2>
+        </section>
+
+        <section id="where">
+            <h2>Where</h2>
+        </section>
+
+        <section id="how">
+            <h2>How</h2>
+        </section>
+
+        <section id="why">
+            <h2>Why</h2>
+        </section>
+
+        <section id="ai">
+            <h2>AI Prompts</h2>
+        </section>
+    </main>
+    <script>
+        function showSection(sectionId) {
+            
+            document.querySelectorAll("main section").forEach(section => {
+                section.style.display = "none";
+            });
+
+            
+            document.getElementById(sectionId).style.display = "block";
+        }
+
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            showSection("what");
+        });
+    </script>
+</body>
+</html>
