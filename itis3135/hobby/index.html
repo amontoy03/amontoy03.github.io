@@ -44,10 +44,10 @@
             box-sizing: border-box;
         }
         figure img {
-            max-width: 100%;
+            width: 300px;
             height: auto;
-            border-radius: 10px;
         }
+
         figcaption {
             font-size: 1.2em;
             text-decoration: none;
@@ -69,6 +69,11 @@
         }
         footer a:hover {
             text-decoration: underline;
+        }
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
         
         
@@ -97,17 +102,38 @@
                     <em>Picture of me</em>
                 </figcaption>
             </figure>
+            
+            <h3>Get In Touch!</h3>
+        <form>
+          <fieldset>
+            <legend>Info</legend>
+            <label for="first-name">Enter Your First Name:</label>
+            <input id="first-name" name="first-name" type="text" required />
+            <label for="last-name">Enter Your Last Name:</label>
+            <input id="last-name" name="last-name" type="text" required />
+            <label for="email">Enter Your Email:</label>
+            <input id="email" name="email" type="email" required />
+            <button type="submit">Submit</button>
+          </fieldset>
+        </form>
         </section>
 
         <section id="home">
             <h2>Home</h2>
             <figure>
-                <img src="images/legoWhat.jpg" width="600" height="150" alt="A lego Technic set"/>
+                <img src="images/legoWhat.jpg" width="600" height="20" alt="A lego Technic set"/>
                 <figcaption>
                     <em>A Lego Technic set</em>
                 </figcaption>
             </figure>
             <p>LEGO is a popular construction toy consisting of interlocking plastic bricks that can be assembled and reassembled to create various structures, vehicles, and figures. First introduced in 1949 by the Danish company The LEGO Group, these colorful bricks feature a unique stud-and-tube coupling system that allows for a secure yet flexible connection. LEGO sets range from simple designs for young children to complex models replicating real-world architecture, robotics, and fictional universes like Star Wars and Harry Potter. The brand has expanded beyond physical toys into video games, movies, and educational tools, making it a versatile and enduring form of creative play.</p>
+            <h3>Popular themed LEGO</h3>
+            <ul>
+                <li>Star Wars</li>
+                <li>Marvel</li>
+                <li>Batman</li>
+                <li>Minecraft</li>
+            </ul>
         </section>
 
         <section id="when">
@@ -119,6 +145,22 @@
                 </figcaption>
             </figure>
             <p>The ideal time for playing with LEGOs depends on the purpose and the individual. For kids, LEGOs are great for creative play during free time, weekends, or after school as a fun and educational activity. Adults and hobbyists often enjoy building LEGO sets as a relaxing pastime in the evenings or on weekends. Whether for play, learning, or stress relief, the best time for LEGOs is whenever you want to engage in creativity and hands-on construction.</p>
+            <h3>When do you prefer to build LEGOs?</h3>
+            <form action="#" method="post" onsubmit="return redirectToHome();">
+                <label for="time">Select your preferred time:</label>
+                <select id="time" name="lego_time">
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
+                    <option value="weekends">Weekends</option>
+                    <option value="whenever">Whenever I have free time</option>
+                </select>
+            
+                <br><br>
+            
+                <button type="submit">Submit</button>
+            </form>
+
         </section>
 
         <section id="where">
@@ -140,14 +182,15 @@
                     <em>Kid following the directions to build the Lego set</em>
                 </figcaption>
             </figure>
+            <h3>How to use LEGO</h3>
             <ul>
                 <li>Follow Instructions – If you have a LEGO set, follow the included step-by-step instructions to build the designed model. The booklet shows how to connect the bricks in order.</li>
                 <li>Free Build – You can also use LEGO bricks to create your own designs without instructions. Stack, connect, and experiment to build whatever you imagine.</li>
                 <li>Use LEGO Technic or Robotics – For more advanced builds, use LEGO Technic or Mindstorms to create moving parts, gears, and even programmable robots.</li>
                 <li>No matter how you use them, LEGOs are all about creativity, and fun!</li>
             </ul>
-            <h3>How to build a LEGO set</h3>
-            <iframe width="560" height="315" src="https://youtu.be/Mfkov_cXHrI?si=SYGIHPwgq-PTiCWi" title="How To Build a LEGO Set" allowfullscreen></iframe>
+            <h4>How to build a LEGO set</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Mfkov_cXHrI" title="How To Build a LEGO Set" allowfullscreen></iframe>
         </section>
 
         <section id="why">
@@ -195,6 +238,11 @@
         document.addEventListener("DOMContentLoaded", () => {
             showSection("home");
         });
+
+        function redirectToHome() {
+            showSection('home');
+            return false;
+        }
     </script>
 </body>
 </html>
