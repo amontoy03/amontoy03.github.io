@@ -38,6 +38,34 @@ figure {
 }
 
 
+
+ol {
+    width: fit-content;      
+    margin: 0 auto;          
+    font-family: Arial, sans-serif;
+  }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: white;
+ 
+  }
+
+  thead tr {
+    background-color: #333;
+    color: white;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+
+ 
+
 /* For Phones*/
 @media (max-width: 768px) {
     header {

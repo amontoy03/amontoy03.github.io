@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Table</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+    <div data-include="components/header.html"></div>
+    
+    <main>
+        <h2>HTML Tables</h2>
+
+        <h3>My Tabular Data</h3>
+
+        <ol>
+            <li>Justin Jefferson - JJeff18@Mooski.com - 5 years</li>
+            <li>Joe Burrow - JBurr9@Mooski.con - 5 years</li>
+            <li>Tyreek Hill - THil10@Mooski.com - 9 years</li>
+            <li>Lamar Jackson - LJac8@Mooski.com - 7 years</li>
+            <li>Aaron Rodgers - ARod8@Mooski.con - 20 years</li>
+            <li>Christian McCaffrey - CMcC23@Mooski.com - 8 years</li>
+            <li>George Kittle - GKit85@Mooski.com - 8 years</li>
+        </ol>
+
+        <h3>Employee Data in Simple Table</h3>
+        <table>
+            <thead>
+               <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Years</th>
+               </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Justin Jefferson</td>
+                    <td>JJeff18@Mooski.com</td>
+                    <td>5</td>    
+                </tr>
+                    
+                <tr>
+                    <td>Joe Burrow</td>
+                    <td>JBurr9@Mooski.com</td>
+                    <td>5</td>
+                </tr>
+
+                <tr>
+                    <td>Tyreek Hill</td>
+                    <td>THil10@Mooski.com</td>
+                    <td>9</td>
+                </tr>
+
+                <tr>
+                    <td>Lamar Jackson</td>
+                    <td>LJac8@Mooski.com</td>
+                    <td>7</td>
+                </tr>
+
+                <tr>
+                    <td>Aaron Rodgers</td>
+                    <td>ARod8@Mooski.com</td>
+                    <td>20</td>
+                </tr>
+
+                <tr>
+                    <td>Christian McCaffrey</td>
+                    <td>CMcC23@Mooski.com</td>
+                    <td>8</td>
+                </tr>
+
+                <tr>
+                    <td>George Kittle</td>
+                    <td>GKit85@Mooski.com</td>
+                    <td>8</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Employee Data in Complex Table</h3>
+        <figure>
+            <figcaption>Employee Information</figcaption>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th id="category">Category</th>
+                        <th id="name">Name</th>
+                        <th id="email">Email</th>
+                        <th id="years">Years</th>
+                        <th id="salary">Monthly Salary</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td rowspan="1">Manager</td>
+                        <td headers="name">Aaron Rodgers</td>
+                        <td headers="email">ARod8@Mooski.com</td>
+                        <td headers="years">20</td>
+                        <td headers="salary">37.5 Million</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="2">QB</td>
+                        <td headers="name">Joe Burrow</td>
+                        <td headers="email">JBurr9@Mooski.com</td>
+                        <td headers="years">5</td>
+                        <td headers="salary">55 Million</td>
+                    </tr>
+
+                    <tr>
+                        <td headers="name">Lamar Jackson</td>
+                        <td headers="email">LJac8@Mooski.com</td>
+                        <td headers="years">7</td>
+                        <td headers="salary">52 Million</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="2">WR</td>
+                        <td headers="name">Justin Jefferson</td>
+                        <td headers="email">JJeff18@Mooski.com</td>
+                        <td headers="years">5</td>
+                        <td headers="salary">35 Million</td>
+                    </tr>
+
+                    <tr>
+                        <td headers="name">Tyreek Hill</td>
+                        <td headers="email">THil10@Mooski.com</td>
+                        <td headers="years">9</td>
+                        <td headers="salary">30 Million</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="1">RB</td>
+                        <td headers="name">Christian McCaffrey</td>
+                        <td headers="email">CMcC23@Mooski.com</td>
+                        <td headers="years">8</td>
+                        <td headers="salary">19 Million</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="1">TE</td>
+                        <td headers="name">George Kittle</td>
+                        <td headers="email">GKit85@Mooski.com</td>
+                        <td headers="years">8</td>
+                        <td headers="salary">15 Million</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total Years</td>
+                        <td headers="years">62</td>
+                        <td headers="salary">243.5 Million</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </figure>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
