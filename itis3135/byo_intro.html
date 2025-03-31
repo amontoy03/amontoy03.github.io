@@ -34,7 +34,8 @@
                 <input type="text" id="background-in-web" name="background-in-web" value="I have little experience with Web Development" required>
                 <label for="primary-computer-platform">Primary Computer Platform:</label>
                 <input type="text" id="primary-computer-platform" name="primary-computer-platform" value="MacOS" required>
-                <label for="courses-currently-taking">Courses currently taking:</label>
+                <label>Courses currently taking:</label>
+                <div id="courses-container"></div>
                 <button type="button" onclick="addCourseField()">Add Course</button>
                 <label for="funny-thing">Funny thing?</label>
                 <input type="text" id="funny-thing" name="funny-thing" value="I like to play video games, go to the gym, and snowboarding when I can" required>
@@ -48,6 +49,10 @@
                 <input type="submit" value="Submit">
                 <input type="reset" value="Reset" onclick="resetForm()">
         </form>
+        <div id="generated-content"></div>
+        <div id="reset-link" style="display: none; margin-top: 20px;">
+        <a href="#" onclick="resetForm()">Reset and Fill Again</a>
+        </div>
     </main>
     
     <div data-include="components/footer.html"></div>
