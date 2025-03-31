@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYO Intro</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+    <div data-include="components/header.html"></div>
+    
+    <main>
+        <h2>BYO Intro</h2>v
+        <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+        <form id="form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="Your name here" required>
+                <label for="mascot">Mascot:</label>
+                <input type="text" id="mascot" name="mascot" value="Your mascot here" required>
+                <label for="image">Image:</label>
+                <input type="file" id="image" name="image" accept=".png, .jpg, .jpeg" required>
+                <label for="image-caption">Image Caption:</label>
+                <input type="text" id="image-caption" name="image-caption" value="Caption text" required>
+                <label for="personal-background">Personal Background:</label>
+                <input type="text" id="personal-background" name="personal-background" value="My personal background..." required>
+                <label for="professional-background">Professional Background:</label>
+                <input type="text" id="professional-background" name="professional-background" value="My professional background..." required>
+                <label for="academic-background">Academic Background:</label>
+                <input type="text" id="academic-background" name="academic-background" value="My academic background..." required>
+                <label for="background-in-web">Background in Web Development:</label>
+                <input type="text" id="background-in-web" name="background-in-web" value="My background in Web Development..." required>
+                <label for="primary-computer-platform">Primary Computer Platform:</label>
+                <input type="text" id="primary-computer-platform" name="primary-computer-platform" value="Windows, Linux, MacOS, etc" required>
+                <label for="courses-currently-taking">Courses currently taking:</label>
+                <button type="button" onclick="addCourseField()">Add Course</button>
+                <label for="funny-thing">Funny thing?</label>
+                <input type="text" id="funny-thing" name="funny-thing" value="Funny thing..." required>
+                <label for="anything-else">Anything else?</label>
+                <input type="text" id="anything-else" name="anything-else" value="Any additional information..." required>
+                <label for="checkbox"></label>
+                <input type="checkbox" id="checkbox" name="checkbox" checked required>
+
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset" onclick="resetForm()">
+        </form>
+    </main>
+    
+    <div data-include="components/footer.html"></div>
+    
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/survey.js"></script>
+</body>
+</html>
