@@ -13,7 +13,7 @@
     <div data-include="components/header.html"></div>
     
     <main>
-        <h2>BYO Intro</h2>v
+        <h2>BYO Intro</h2>
         <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
         <form id="form">
                 <label for="name">Name:</label>
@@ -40,8 +40,10 @@
                 <input type="text" id="funny-thing" name="funny-thing" value="Funny thing..." required>
                 <label for="anything-else">Anything else?</label>
                 <input type="text" id="anything-else" name="anything-else" value="Any additional information..." required>
-                <label for="checkbox"></label>
-                <input type="checkbox" id="checkbox" name="checkbox" checked required>
+                <label for="checkbox">
+                    <input type="checkbox" id="checkbox" name="checkbox" checked required>
+                    I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
+                </label>
 
                 <input type="submit" value="Submit">
                 <input type="reset" value="Reset" onclick="resetForm()">
