@@ -117,7 +117,33 @@ table {
     text-align: left;
 }
 
- 
+  .left {
+    text-align: left;
+  }
+
+  .left-align0 {
+    text-align: left;
+  }
+
+  .left-align1 {
+    text-align: left;
+  }
+
+  .left-align2 {
+    text-align: left;
+  }
+
+  .left-align3 {
+    text-align: left;
+  }
+
+  .left-align4 {
+    text-align: left;
+  }
+
+  .left-align5 {
+    text-align: left;
+  }
 
 /* For Phones*/
 @media (max-width: 768px) {
