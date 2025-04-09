@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner's Guide To Web Development - Quiz Page</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h1>Knowledge Check</h1>
+        <div class="container">
+        <h2>QUIZ:</h2>
+        <p>Test your knowledge in HTML, CSS, and JavaScript</p>
+        
+           <div class="quiz">
+            <form id="quizForm">
+              <div class="question">
+                <h3>1. What does HTML stand for?</h3>
+                <label><input type="radio" name="q1" value="a"> HyperText Markup Language</label><br>
+                <label><input type="radio" name="q1" value="b"> HighText Machine Language</label><br>
+                <label><input type="radio" name="q1" value="c"> Hyperlink and Text Markup Language</label>
+              </div>
+      
+              <div class="question">
+                <h3>2. Which tag is used to add a paragraph in HTML?</h3>
+                <label><input type="radio" name="q2" value="a"> &lt;p&gt;</label><br>
+                <label><input type="radio" name="q2" value="b"> &lt;css&gt;</label><br>
+                <label><input type="radio" name="q2" value="c"> &lt;script&gt;</label>
+              </div>
+      
+              <div class="question">
+                <h3>3. How do you write a JavaScript function?</h3>
+                <label><input type="radio" name="q3" value="a"> function myFunction()</label><br>
+                <label><input type="radio" name="q3" value="b"> function:myFunction()</label><br>
+                <label><input type="radio" name="q3" value="c"> create function myFunction()</label>
+              </div>
+      
+              <button type="button" onclick="checkAnswers()">Submit</button>
+              <button type="reset">Restart</button>
+              <p class="result" id="result"></p>
+            </form>
+          </div>
+        </div>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/include.js"></script>
+    <script>
+        function checkAnswers() {
+          const form = document.forms["quizForm"];
+          const result = document.getElementById("result");
+    
+          const answers = {
+            q1: "a",
+            q2: "a",
+            q3: "a"
+          };
+    
+          let score = 0;
+          let total = Object.keys(answers).length;
+    
+          for (let key in answers) {
+            const userAnswer = form[key].value;
+            if (!userAnswer) {
+              result.textContent = "Please answer all questions before submitting.";
+              result.style.color = "red";
+              return;
+            }
+            if (userAnswer === answers[key]) {
+              score++;
+            }
+          }
+    
+          result.textContent = `You scored ${score} out of ${total}`;
+          result.style.color = "green";
+        }
+      </script>
+</body>
+    
+</html>

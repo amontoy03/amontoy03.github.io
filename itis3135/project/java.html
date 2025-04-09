@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner's Guide To Web Development - Java Page</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h1>Learn Java</h1>
+        <div class="container2">
+        <h2>The Basics To Java:</h2>
+        <p>JavaScript lets you add interactivity to your pages. You can create variables, define functions, and respond to events. Below here are a few concepts that will help you better understand:</p>
+        
+        <section id="syntax">
+            <h2>Basic JavaScript Syntax</h2>
+            <p>JavaScript can be written within &lt;script&gt; tags or in external .js files. Example:</p>
+            <pre><code>let greeting = "Hi there!";
+        alert(greeting);</code></pre>
+          </section>
+        
+          <section id="variables">
+            <h2>Variables in JavaScript</h2>
+            <p>Variables let you store data. You can use <code>let</code>, <code>const</code>, or <code>var</code> to declare them:</p>
+            <pre><code>let username = "Alice";
+        const userAge = 30;
+        var enrolled = false;</code></pre>
+          </section>
+        
+          <section id="functions" class="container-wide">
+            <h2>Functions</h2>
+            <p>Functions help organize your code into reusable blocks:</p>
+            <pre><code>function sayHello() {
+            console.log("Hello from inside a function!");
+        }
+        
+        sayHello();</code></pre>
+          </section>
+          </div>
+        
+
+          <section id="editor" class="try-editor">
+            <h2>Try it Yourself</h2>
+            <p>Type your JavaScript code below and click "Run Code" to see the result.</p>
+            <textarea id="codeBox">console.log('Hello, beginner!');</textarea>
+            <br>
+            <button onclick="runCode()">Run Code</button>
+            <h3>Output:</h3>
+            <div id="output"></div>
+          </section>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/include.js"></script>
+    <script>
+        function runCode() {
+          const code = document.getElementById("codeBox").value;
+          const outputArea = document.getElementById("output");
+      
+          let logOutput = "";
+          const originalLog = console.log;
+          console.log = function (...args) {
+            logOutput += args.join(" ") + "\n";
+          };
+      
+          try {
+            eval(code);
+            outputArea.textContent = logOutput.trim() || "(No output)";
+          } catch (error) {
+            outputArea.textContent = "Error: " + error.message;
+          } finally {
+            console.log = originalLog;
+          }
+        }
+      </script>
+</body>
+    
+</html>

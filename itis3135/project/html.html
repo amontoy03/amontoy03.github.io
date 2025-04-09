@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner's Guide To Web Development - HTML Page</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h1>Learn HTML</h1>
+        
+        <div class="container3">
+        <h2>The Basics To HTML:</h2>
+        <p>HTML (HyperText Markup Language) is a language used to build the basic structure of web pages. Below here are a few concepts that will help you better understand:</p>
+        <h2>This is how you start an HTML document:</h2>
+        <pre>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;title&gt;My First Page&lt;/title&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                &lt;h1&gt;Hello, World!&lt;/h1&gt;
+                &lt;p&gt;Welcome to HTML basics.&lt;/p&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
+        </div>
+
+        <div class="container2">
+            <h2>Elements</h2>
+            <p>
+              HTML is made up of elements, which are the building blocks of a web page.
+              An element usually includes an opening tag, some content, and a closing tag.
+            </p>
+          
+            <p>For example:</p> 
+            <pre>&lt;p&gt;This is a paragraph.&lt;/p&gt;</pre>
+          
+            <h2>Headings</h2>
+            <p>
+              Headings in HTML help organize content. They range from
+              <code>&lt;h1&gt;</code> (most important) to <code>&lt;h6&gt;</code> (least important):
+            </p>
+            <pre>
+          &lt;h1&gt;Main Heading&lt;/h1&gt;
+          &lt;h2&gt;Subheading&lt;/h2&gt;
+          &lt;h3&gt;Smaller Subheading&lt;/h3&gt;
+            </pre>
+          
+            <h2>Tags</h2>
+            <ul>
+              <li>Headings: <code>&lt;h1&gt; to &lt;h6&gt;</code></li>
+              <li>Paragraphs: <code>&lt;p&gt;</code></li>
+              <li>Anchor (Link): <code>&lt;a href="url"&gt;</code></li>
+              <li>Image: <code>&lt;img src="image.jpg" alt="Description"&gt;</code></li>
+              <li>Lists: <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code></li>
+              <li>Containers: <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code></li>
+            </ul>
+          </div>
+      
+          <div class="try-editor">
+            <h2>Try it yourself:</h2>
+            <textarea id="html-code">
+          <p>This is my first HTML page!</p></textarea>
+            <button onclick="runCode()">Run Code</button>
+            <div id="output"></div>
+          </div>
+        
+
+
+        
+
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/include.js"></script>
+    <script>
+        function runCode() {
+          const userCode = document.getElementById('html-code').value;
+          document.getElementById('output').innerHTML = userCode;
+        }
+      </script>
+</body>
+    
+</html>
