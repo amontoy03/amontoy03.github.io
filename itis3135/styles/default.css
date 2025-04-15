@@ -145,6 +145,117 @@ table {
     text-align: left;
   }
 
+  .slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .mySlides img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+  
+  .mySlides:first-child {
+    display: block;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    border-radius: 0 3px 3px 0;
+    background-color: rgba(32, 178, 170, 0.8);
+    transform: translateY(-50%);
+    transition: 0.3s;
+    display: none;
+    user-select: none;
+  }
+  
+  .slideshow-container:hover .prev,
+  .slideshow-container:hover .next {
+    display: block;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .caption-container {
+    text-align: center;
+    background-color: #2ecc71;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .thumbnail {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    overflow-x: auto;
+    padding: 10px;
+    gap: 10px;
+    background: #fff;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .thumbnail-demo {
+    width: 60px;
+    height: 40px;
+    box-sizing: border-box; 
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .thumbnail-demo:hover {
+    opacity: 1;
+    border-color: darkseagreen;
+    transform: scale(1.05);
+  }
+  
+  .thumbnail-active {
+    opacity: 1;
+    border-color: darkseagreen;
+    transform: scale(1.05);
+  }
+  
+  ul {
+    list-style: square;
+    padding-left: 20px;
+    background-color: green;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+  }
+
 /* For Phones*/
 @media (max-width: 768px) {
     header {
