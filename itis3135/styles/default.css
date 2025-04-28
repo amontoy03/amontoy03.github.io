@@ -255,6 +255,21 @@ table {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 
   }
+  .review ul {
+    background-color: lightcyan;
+    text-align: center;
+    list-style-position: inside;
+    padding: 16px;
+    margin: 0 auto;
+    width: fit-content;
+    max-width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.review ul li {
+    display: list-item;
+}
 
 /* For Phones*/
 @media (max-width: 768px) {
