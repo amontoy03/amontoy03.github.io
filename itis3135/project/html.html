@@ -52,15 +52,15 @@
           &lt;h3&gt;Smaller Subheading&lt;/h3&gt;
             </pre>
           
-            <h2>Tags</h2>
-            <ul>
-              <li>Headings: <code>&lt;h1&gt; to &lt;h6&gt;</code></li>
-              <li>Paragraphs: <code>&lt;p&gt;</code></li>
-              <li>Anchor (Link): <code>&lt;a href="url"&gt;</code></li>
-              <li>Image: <code>&lt;img src="image.jpg" alt="Description"&gt;</code></li>
-              <li>Lists: <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code></li>
-              <li>Containers: <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code></li>
-            </ul>
+            <h2 onclick="toggleTags()" style="cursor: pointer;">Tags &#9660;</h2>
+              <ul id="tags-list" style="display: none;">
+                <li>Headings: <code>&lt;h1&gt; to &lt;h6&gt;</code></li>
+                <li>Paragraphs: <code>&lt;p&gt;</code></li>
+                <li>Anchor (Link): <code>&lt;a href="url"&gt;</code></li>
+                <li>Image: <code>&lt;img src="image.jpg" alt="Description"&gt;</code></li>
+                <li>Lists: <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code></li>
+                <li>Containers: <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code></li>
+              </ul>
           </div>
       
           <div class="try-editor">
@@ -78,6 +78,16 @@
     </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/include.js"></script>
+    <script>
+      function toggleTags() {
+          const list = document.getElementById('tags-list');
+          if (list.style.display === 'none') {
+              list.style.display = 'block';
+          } else {
+              list.style.display = 'none';
+          }
+      }
+      </script>
     <script>
         function runCode() {
           const userCode = document.getElementById('html-code').value;

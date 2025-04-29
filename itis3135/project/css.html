@@ -56,20 +56,20 @@
         </div>
     
         <div class="container2">
-          <h2>Common CSS Properties</h2>
+          <h2 onclick="toggleDropdown()" style="cursor: pointer;">Common CSS Properties &#9660;</h2>
           <p>These are some of the most frequently used CSS properties:</p>
-          <ul>
-            <li><strong>color:</strong> Sets the text color</li>
-            <li><strong>background-color:</strong> Sets the background color</li>
-            <li><strong>font-size:</strong> Sets the size of the font</li>
-            <li><strong>font-family:</strong> Sets the typeface of the text</li>
-            <li><strong>margin:</strong> Sets the space outside the element</li>
-            <li><strong>padding:</strong> Sets the space inside the element</li>
-            <li><strong>border:</strong> Sets the border style, width, and color</li>
-            <li><strong>width / height:</strong> Sets the dimensions of an element</li>
-            <li><strong>display:</strong> Defines how an element is displayed (e.g., block, inline, flex)</li>
+          <ul id="css-properties" style="display: none;">
+              <li><strong>color:</strong> Sets the text color</li>
+              <li><strong>background-color:</strong> Sets the background color</li>
+              <li><strong>font-size:</strong> Sets the size of the font</li>
+              <li><strong>font-family:</strong> Sets the typeface of the text</li>
+              <li><strong>margin:</strong> Sets the space outside the element</li>
+              <li><strong>padding:</strong> Sets the space inside the element</li>
+              <li><strong>border:</strong> Sets the border style, width, and color</li>
+              <li><strong>width / height:</strong> Sets the dimensions of an element</li>
+              <li><strong>display:</strong> Defines how an element is displayed (e.g., block, inline, flex)</li>
           </ul>
-        </div>
+      </div>
     
         <div class="try-editor">
           <h2>Try It Yourself!</h2>
@@ -82,6 +82,16 @@
       </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/include.js"></script>
+    <script>
+      function toggleDropdown() {
+          const list = document.getElementById('css-properties');
+          if (list.style.display === 'none') {
+              list.style.display = 'block';
+          } else {
+              list.style.display = 'none';
+          }
+      }
+      </script>
     <script>
         function applyCSS() {
             const style = document.createElement('style');
