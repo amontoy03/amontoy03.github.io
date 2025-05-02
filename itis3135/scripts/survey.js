@@ -52,26 +52,34 @@ function handleSubmit(event) {
     const form = document.getElementById("form");
     const formData = new FormData(form);
     const courses = Array.from(document.getElementsByName("course")).map((course) => course.value);
+    const imageFile = formData.get("image");
 
-    let content = `
-        <h2>${formData.get("name")} Intro Page</h2>
-        <p><strong>Mascot:</strong> ${formData.get("mascot")}</p>
-        <figure>
-            <img src="" alt="Uploaded image will display here">
-            <figcaption>${formData.get("image-caption")}</figcaption>
-        </figure>
-        <p><strong>Personal Background:</strong> ${formData.get("personal-background")}</p>
-        <p><strong>Professional Background:</strong> ${formData.get("professional-background")}</p>
-        <p><strong>Academic Background:</strong> ${formData.get("academic-background")}</p>
-        <p><strong>Background in Web Development:</strong> ${formData.get("background-in-web")}</p>
-        <p><strong>Primary Computer Platform:</strong> ${formData.get("primary-computer-platform")}</p>
-        <p><strong>Courses Currently Taking:</strong></p>
-        <ul>${courses.map((course) => `<li>${course}</li>`).join('')}</ul>        
-        <p><strong>Funny thing:</strong> ${formData.get("funny-thing")}</p>
-        <p><strong>Anything else:</strong> ${formData.get("anything-else")}</p>
-    `;
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        const content = `
+            <h2>${formData.get("name")} Intro Page</h2>
+            <p><strong>Mascot:</strong> ${formData.get("mascot")}</p>
+            <figure>
+                <img src="${e.target.result}" alt="Uploaded image" style="max-width: 300px;">
+                <figcaption>${formData.get("image-caption")}</figcaption>
+            </figure>
+            <p><strong>Personal Background:</strong> ${formData.get("personal-background")}</p>
+            <p><strong>Professional Background:</strong> ${formData.get("professional-background")}</p>
+            <p><strong>Academic Background:</strong> ${formData.get("academic-background")}</p>
+            <p><strong>Background in Web Development:</strong> ${formData.get("background-in-web")}</p>
+            <p><strong>Primary Computer Platform:</strong> ${formData.get("primary-computer-platform")}</p>
+            <p><strong>Courses Currently Taking:</strong></p>
+            <ul>${courses.map((course) => `<li>${course}</li>`).join('')}</ul>        
+            <p><strong>Funny thing:</strong> ${formData.get("funny-thing")}</p>
+            <p><strong>Anything else:</strong> ${formData.get("anything-else")}</p>
+        `;
 
-    document.getElementById("form").style.display = "none";
-    document.getElementById("generated-content").innerHTML = content;
-    document.getElementById("reset-link").style.display = "block";
+        document.getElementById("form").style.display = "none";
+        document.getElementById("generated-content").innerHTML = content;
+        document.getElementById("reset-link").style.display = "block";
+    };
+
+    if (imageFile) {
+        reader.readAsDataURL(imageFile);
+    }
 }
