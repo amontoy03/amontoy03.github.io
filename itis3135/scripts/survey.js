@@ -52,11 +52,12 @@ function handleSubmit(event) {
     const form = document.getElementById("form");
     const formData = new FormData(form);
     const courses = Array.from(document.getElementsByName("course")).map((course) => course.value);
-    const imageFile = formData.get("image");
+    const imageFile = document.getElementById("image").files[0];
 
     const reader = new FileReader();
+
     reader.onload = function (e) {
-        const content = `
+        let content = `
             <h2>${formData.get("name")} Intro Page</h2>
             <p><strong>Mascot:</strong> ${formData.get("mascot")}</p>
             <figure>
@@ -69,7 +70,7 @@ function handleSubmit(event) {
             <p><strong>Background in Web Development:</strong> ${formData.get("background-in-web")}</p>
             <p><strong>Primary Computer Platform:</strong> ${formData.get("primary-computer-platform")}</p>
             <p><strong>Courses Currently Taking:</strong></p>
-            <ul>${courses.map((course) => `<li>${course}</li>`).join('')}</ul>        
+            <ul>${courses.map((course) => `<li>${course}</li>`).join('')}</ul>
             <p><strong>Funny thing:</strong> ${formData.get("funny-thing")}</p>
             <p><strong>Anything else:</strong> ${formData.get("anything-else")}</p>
         `;
@@ -81,5 +82,7 @@ function handleSubmit(event) {
 
     if (imageFile) {
         reader.readAsDataURL(imageFile);
+    } else {
+        alert("Please upload an image.");
     }
 }
